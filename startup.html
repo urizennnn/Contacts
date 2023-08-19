@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Contact</title>
+    <link rel="stylesheet" href="css/startup.css">
+    <script defer src="js/startup.js">  </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="brand-name">
+                    <a href="/" class="logo">Urizen</a>
+                </div>
+                <div class="bars">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li class="active">Add Contact</li>
+                        <li><a href="view.html">View Contact</a> </li>
+                        <li>About</li>
+
+                </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h4>Add Contact</h4>
+        <label for="contact">Choose method:</label>
+        <select id="contact" name="contact" required>
+            <option value="" disabled selected>Select a phone option</option>
+            <option value="phone">Phone Number</option>
+            <option value="form">Form</option>
+        </select>
+        <div class="contact">
+            <!-- <input type="tel" class="num" name="iosPhoneNumber" pattern="^[+]?[0-9]*$" placeholder="Enter phone number" required>
+            <ul >
+                <li class="phone">1</li>
+                <li class="phone">2</li>
+                <li class="phone">3</li>
+                <li class="phone">4</li>
+                <li class="phone">5</li>
+                <li class="phone">6</li>
+                <li class="phone">7</li>
+                <li class="phone">8</li>
+                <li class="phone">9</li>
+                <li class="phone">0</li>
+            </ul> -->
+
+
+            <!-- <label for="name">Name:</label>
+            <input type="text" class="name" placeholder="Enter name" required>
+            <label for="number">Phone Number:</label>
+            <input type="tel" class="number" name="iosPhoneNumber" pattern="^[+]?[0-9]*$" placeholder="Enter phone number" required> -->
+        </div>
+
+    </section>
+</body>
+
+</html>
