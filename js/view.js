@@ -96,7 +96,7 @@ function deleteContact(button) {
  */
 function showMore(button) {
     // Find the closest parent element containing the contact's data attributes
-    const contactElement = button.closest('.contact');
+    const contactElement = button.closest('p');
 
     // Get the name and number from the contact's data attributes
     const name = contactElement.getAttribute('data-name');
@@ -126,13 +126,14 @@ function showMore(button) {
  */
 function closeButton(button) {
     // Find the closest parent element containing the contact's data attributes
-    const contactElement = button.closest('.contact');
+    const contactElement = button.closest('p');
 
     // Get the "More" button inside the contact element
     const moreButton = contactElement.querySelector('[onclick="showMore(this)"]');
     
     // Display the "More" button
     moreButton.style.display = 'inline-block';
+    
 
     // Remove the last child element, which is the information section
     contactElement.removeChild(contactElement.lastElementChild);
