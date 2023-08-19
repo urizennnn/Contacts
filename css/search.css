@@ -46,3 +46,22 @@ body {
   padding: 1rem;
   text-transform: uppercase;
 }
+
+.search-container
+{
+  position: relative;
+}
+
+.search-container .icon
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  /* border: red solid 2px; */
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

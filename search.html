@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="js/init.js" ></script>
     <script type="module" defer src="js/search.js"></script>
     <link rel="stylesheet" href="css/startup.css">
@@ -23,10 +24,10 @@
                 </div>
                 <div class="navbar">
                     <ul>
-                        <li class=""><a href="startup.html">Add Contact</a></li>
+                        <li class=""><a href="index.html">Add Contact</a></li>
                         <li><a href="view.html" >View Contact</a> </li>
                         <li><a href="search.html" class="active">Search Contact</a></li>
-                        <li>About</li>
+                        
     
                 </div>
                 </ul>
@@ -35,8 +36,14 @@
     </header>
 
     <section>
-        <label for="search" >Search</label> <br>
-        <input type="text" class="search" placeholder="Input name" required>
+        <label for="search" ><i class="fas fa-search" ></i> Search</label> <br>
+           
+        <div class="search-container">
+            <div class="icon">
+                <i class="fas fa-search" ></i>
+            </div>
+            <input type="text" class="search" placeholder="Input name" required>
+        </div>
 
         <div class="contents">
             <div class="spinner-container hidden" id="spinnerContainer">
