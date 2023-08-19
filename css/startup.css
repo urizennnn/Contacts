@@ -24,7 +24,6 @@ body {
 
 header
 {
-  /* border: #fff solid 2px; */
   height: 70px;
   width: 100%;
 }
@@ -32,13 +31,11 @@ header
 header .container
 {
   height: 100%;
-  /* border: green solid 2px; */
 }
 
 header .container .row
 {
   height: 100%;
-  /* border: rgb(205, 20, 209) solid 2px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,7 +175,6 @@ body section button
 
 .keypad
 {
-  /* border: red solid 2px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -187,7 +183,6 @@ body section button
 
 .keypad .phone
 {
-  /* border: green solid 2px; */
   width: 33.33%;
   height: 50px;
   list-style: none;

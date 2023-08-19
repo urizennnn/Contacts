@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Contact</title>
+    <!-- Link to FONT AWESOME CDN Below -->
+    <link rel="stylesheet" href="">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/startup.css">
+    <!-- JS -->
+    <script defer src="js/init.js">  </script>
     <script defer src="js/startup.js">  </script>
 </head>
 
@@ -21,9 +26,10 @@
                 </div>
                 <div class="navbar">
                     <ul>
-                        <li class="active">Add Contact</li>
-                        <li><a href="view.html">View Contact</a> </li>
-                        <li>About</li>
+                        <li ><a href="startup.html" class="active">Add Contact</a></li>
+                        <li><a href="view.html" >View Contact</a> </li>
+                        <li><a href="search.html">Search Contact</a></li>
+                        <li><a href="#">About</a></li>
 
                 </div>
                 </ul>
@@ -32,13 +38,15 @@
     </header>
 
     <section>
-        <h4>Add Contact</h4>
-        <label for="contact">Choose method:</label>
-        <select id="contact" name="contact" required>
-            <option value="" disabled selected>Select a phone option</option>
-            <option value="phone">Phone Number</option>
-            <option value="form">Form</option>
-        </select>
+        <h4> <i class="far fa-vcard"></i> Add Contact</h4>
+        <div class="input">
+            <label for="contact">Choose method:</label>
+            <select id="contact" name="contact" required>
+                <option value="" disabled selected>Select a phone option</option>
+                <option value="phone">Phone Number</option>
+                <option value="form">Form</option>
+            </select>
+        </div>
         <div class="contact">
             <!-- <input type="tel" class="num" name="iosPhoneNumber" pattern="^[+]?[0-9]*$" placeholder="Enter phone number" required>
             <ul >

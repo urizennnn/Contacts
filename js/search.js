@@ -1,38 +1,48 @@
 'use strict';
 
-import contacts from './view.js';
-
+// Get a reference to the spinner container and search results container
 const spinnerContainer = document.getElementById('spinnerContainer');
 const showContacts = document.querySelector('.search-results');
 const search = document.querySelector('.search');
 
-let searchTimeout; // To store the setTimeout reference
+// Initialize a variable to store the setTimeout reference
+let searchTimeout;
 
+// Listen for the 'input' event on the search input field
 search.addEventListener('input', (e) => {
     // Clear any existing timeouts
     clearTimeout(searchTimeout);
 
+    // Get the lowercase search value from the input field
     const searchValue = search.value.toLowerCase();
 
-    // Show the spinner immediately
-    spinnerContainer.classList.remove('hidden');
-
-    // Set a timeout to hide the spinner after 3 seconds
+    // Set a timeout before starting the search
     searchTimeout = setTimeout(() => {
-        spinnerContainer.classList.add('hidden');
-    }, 3000);
+        // Hide all previously displayed contact elements
+        document.querySelectorAll('.contact').forEach(contact => {
+            contact.classList.add('hidden');
+        });
 
-    // Clear the previous search results
-    showContacts.innerHTML = '';
+        // Show the spinner
+        spinnerContainer.classList.remove('hidden');
 
-    // Loop through the contacts array and filter based on the search value
-    contacts.forEach(contact => {
-        const { name, number } = contact;
-        if (name.toLowerCase().includes(searchValue) || number.includes(searchValue)) {
-            // Create a new contact element and append it to the search results
-            const contactElement = document.createElement('div');
-            contactElement.textContent = `${name} - ${number}`;
-            showContacts.appendChild(contactElement);
-        }
-    });
+        // Simulate a time-consuming operation (e.g., fetching contacts)
+        setTimeout(() => {
+            // Loop through the contacts array and filter based on the search value
+            contacts.forEach(contact => {
+                const { name, number } = contact;
+                if (name.toLowerCase().includes(searchValue) || number.includes(searchValue)) {
+                    // Create a new contact element and append it to the search results
+                    const contactElement = document.createElement('div');
+                    contactElement.classList.add('contact');
+                    contactElement.textContent = `${name} - ${number}`;
+                    showContacts.appendChild(contactElement);
+                }
+            });
+
+            // Hide the spinner when the filtering is done
+            spinnerContainer.classList.add('hidden');
+        }, 2000); // Simulating a time-consuming operation for demonstration
+
+    }, 500); // Set a delay before starting the search
 });

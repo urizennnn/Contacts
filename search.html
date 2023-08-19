@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer type="module" src="js/view.js"></script>
-    <script defer type="module" src="js/search.js"></script>
+    <script defer src="js/init.js" ></script>
+    <script defer src="js/search.js"></script>
+    <link rel="stylesheet" href="css/startup.css">
+    <link rel="stylesheet" href="css/view.css">
     <link rel="stylesheet" href="css/search.css">
     <title>Search your Contacts</title>
 </head>
 <body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="brand-name">
+                    <a href="/" class="logo">Urizen</a>
+                </div>
+                <div class="bars">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li class=""><a href="startup.html">Add Contact</a></li>
+                        <li><a href="view.html" >View Contact</a> </li>
+                        <li><a href="search.html" class="active">Search Contact</a></li>
+                        <li>About</li>
+    
+                </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+
     <section>
         <label for="search" >Search</label> <br>
         <input type="text" class="search" placeholder="Input name" required>
 
-        <div class="search-results">
+        <div class="contents">
             <div class="spinner-container hidden" id="spinnerContainer">
                 <div class="spinner"></div>
+            </div>
+
+            <div class="search-results contacts">
+
             </div>
 
 

@@ -1,205 +1,61 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html
+.contacts
 {
-  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
-a
+.contacts .contact 
 {
-  text-decoration: none;
-  color: #fff;
+  border: grey solid 1px;
+  height: max-content;
+  width: 33.33%;
+  padding: 1rem;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #313131;
-  color: #fff;
-  position: relative;
-}
-
-header
+.contacts .contact p
 {
-  /* border: #fff solid 2px; */
-  height: 70px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.contacts .contact p span
+{
+  margin: 0 3px;
+}
+
+.contacts .contact p span:first-of-type
+{
+  margin-left: 20px;
+}
+
+.contacts .contact p span button
+{
+  width: max-content;
+  padding: 1rem;
+}
+
+.contacts .contact p .infoElement
+{
+  display: block;
   width: 100%;
 }
 
-header .container
+.contacts .contact p .infoElement h5,
+.contacts .contact p .infoElement p
 {
-  height: 100%;
-  /* border: green solid 2px; */
-}
-
-header .container .row
-{
-  height: 100%;
-  /* border: rgb(205, 20, 209) solid 2px; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-header .container .row .brand-name
-{
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-header .container .row .brand-name:hover
-{
-  opacity: 0.5;
-}
-
-header .container .row .bars
-{
-  display: none;
-}
-
-
-header .container .row .navbar ul li
-{
-  display: inline-flex;
-}
-
-header .container .row .navbar ul li a
-{
-  padding: 1rem;
-}
-
-header .container .row .navbar ul li a:hover,
-header .container .row .navbar ul li a.active
-{
-  border-bottom: 1px solid #fff;
-}
-
-@media screen and (max-width: 786px) {
-
-  header .container .row .navbar
-  {
-    display: none;
-  }
-  
-  header .container .row .bars
-  {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-}
-
-
-body section
-{
+  background: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 70px);
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-body section h4,
-body section label,
-body section select,
-body section input,
-body section button,
-body section .contact
-{
+  text-align: center;
   margin: 5px 0;
-}
-
-body section h4
-{
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: #fff;
-  color: #000;
   padding: 1rem;
-  border-radius: 5px;
 }
 
-body section label
-{
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-body section select
-{
-  height: 40px;
-  width: 200px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: capitalize;
-  outline: none;
-  border: none;
-}
-
-body section input
-{
-  height: 40px;
-  width: 320px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  display: block;
-  padding: 0 1rem;
-}
-
-body section button
-{
-  background: #000;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 320px;
-  outline: none;
-  border: none;
-  margin-top: 20px;
-  border-radius: 5px;
-}
-
-/* Keypad Styling */
-
-.keypad
-{
-  /* border: red solid 2px; */
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.keypad .phone
-{
-  /* border: green solid 2px; */
-  width: 33.33%;
-  height: 50px;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #fff;
-}
-
-.keypad .phone:hover
-{
-  background: #fff;
-  color: #000;
-  border: #000 solid 1px;
-}
